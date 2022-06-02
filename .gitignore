@@ -1,0 +1,10 @@
+.DS_Store
+build
+.esbuild
+.serverless
+node_modules
+.offline.pid
+*-debug.log
+.docker-env.dev
+artifacts
+.cache
