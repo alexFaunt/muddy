@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/routes/index.svelte",
   "scripts": {
-    "clear": "rm -rf ./.data && gatsby clean",
+    "clear": "rm -rf ./.data && rm -rf ./public && gatsby clean",
     "scrape": "node ./src/scrape.js",
     "start": "gatsby develop -H 0.0.0.0",
     "build": "npm run clear && npm run scrape && gatsby build --prefix-paths",
