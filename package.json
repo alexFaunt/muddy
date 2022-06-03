@@ -7,7 +7,7 @@
     "clear": "rm -rf ./.data && gatsby clean",
     "scrape": "node ./src/scrape.js",
     "start": "gatsby develop -H 0.0.0.0",
-    "build": "npm run clear && npm run scrape && gatsby build",
+    "build": "npm run clear && npm run scrape && gatsby build --prefix-paths",
     "deploy": "npm run build && gh-pages -d public"
   },
   "author": "",
