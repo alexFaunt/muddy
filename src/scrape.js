@@ -4,6 +4,7 @@ const puppeteer = require('puppeteer');
 const monthConfig = require('./month-config');
 
 const CACHE_DIR = path.resolve(__dirname, '../.data');
+const SCRAPE_PAGE = 'https://www.worldweatheronline.com/yeovilton-weather-history/somerset/gb.aspx';
 
 const numToDate = (num) => num.toString().padStart(2, '0');
 const getCachePath = ({ year, day, month }) => path.join(CACHE_DIR, `${year}-${numToDate(month)}-${numToDate(day)}.json`)
@@ -35,7 +36,7 @@ const getAllYears = async ({ day, month }) => {
 
   const page = await browser.newPage();
 
-  await page.goto('https://www.worldweatheronline.com/yeovilton-weather-history/somerset/gb.aspx');
+  await page.goto(SCRAPE_PAGE);
 
   try {
     await page.waitForSelector('input[type="date"]');
