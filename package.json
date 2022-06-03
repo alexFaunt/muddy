@@ -1,0 +1,27 @@
+{
+  "name": "weather-compare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/routes/index.svelte",
+  "scripts": {
+    "clear": "rm -rf ./.data",
+    "scrape": "node ./src/scrape.js",
+    "clear-today": "echo clear yesterday - TODO - would need to check in the data",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "npm run build && gh-pages -d public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.8.0",
+    "gatsby": "^3.11.1",
+    "puppeteer": "^14.2.1",
+    "react": "^17.0.1",
+    "react-chartjs-2": "^4.1.0",
+    "react-dom": "^17.0.1"
+  }
+}
